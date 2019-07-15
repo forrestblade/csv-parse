@@ -8,6 +8,10 @@ export default class JSONParse extends Component {
     configOptions: PropTypes.object
   }
 
+  state = {
+    data: {}
+  }
+
   parseJSON = (e, config) => {
     let csv = PapaParse.unparse(e)
     let csvContent = 'data:text/csv;charset=utf-8,' + csv
@@ -23,11 +27,11 @@ export default class JSONParse extends Component {
     const {
       data,
       configOptions = {}
-    } = this.props
+    } = this.state
 
     return (
       <div>
-        <textarea rows='20' cols='90' />
+        <textarea onChange={e => this.setState({ data: e.target.value })} rows='20' cols='90' />
         <br />
         <button className='export' onClick={() => this.parseJSON(data, configOptions)} >
           Export

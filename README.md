@@ -1,19 +1,10 @@
-# react-seed
+# CSV-parse
 
-react-seed is a project to help people bootstrap projects without CRA.  Technologies like Redux are used for state management.  For testing a stack including Jest, Enzyme, Code and Sinon are applied.
+CSV-parse is a tool to help people parse CSV files into JSON objects and vice versa.  Use of the papaparse library is made, so features like auto-delimiter detection and many more cool things can be easily configured.  This is a work in progress so please create new issues as you may see them arise.
 
 ## Installation
 
-How you install this repository depends on how you intend to use it.  
-
-For personal use simply click [here](https://github.com/forrestblade/react-seed/generate).  Clone your new repository, install it with `npm i` and start hacking!
-
-If you plan to contribute simply clone the repository, install it and checkout a new development branch.  
-
-```bash
-git clone https://github.com/forrestblade/react-seed.git && cd react-seed && npm i && git checkout -b dev && npm start
-```
-
+I don't have an npm module up yet so in the meantime, just clone this project.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

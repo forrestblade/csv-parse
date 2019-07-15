@@ -1,27 +1,48 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import { CSVReader, JSONParse } from '../utils';
 
 export class App extends Component {
-  state = {}
 
-  render () {
+  constructor(props){
+    super(props)
+    this.fileInput = React.createRef();
+    this.state = {
+      data: ''
+    }
+  }
+  
+  handleReadCSV = (data, fileName) => {
+    data = JSON.stringify(data)
+    this.setState({data})
+  }
+
+  handleOnError = (err, file, inputElem, reason) => {
+    console.log(err);
+  }
+
+  handleImportOffer = () => {
+    this.fileInput.current.click();
+  }
+
+  render() {
     return (
-      <section className='App'>
-        <p>React Seed</p>
-        <section className='counter'>
-          <button className='decrement' onClick={() => this.props.decrement()}>-</button>
-          {this.props.value}
-          <button className='increment' onClick={() => this.props.increment()}>+</button>
-        </section>
-      </section>
-    )
+      <React.Fragment>
+      <div>
+        <CSVReader
+          onFileLoaded={this.handleReadCSV}
+          inputRef={this.fileInput}
+          style={{display: 'none'}}
+          onError={this.handleOnError}
+          configOptions={{header: true}}
+        />
+        <button onClick={this.handleImportOffer}>Import</button>
+      </div>
+      <hr />
+      <div>
+        <JSONParse data={this.state.data} />
+      </div>
+      </React.Fragment>
+    );
   }
 }
 
-App.defaultProps = {
-  value: 0
-}
-
-App.propTypes = {
-  value: PropTypes.number
-}

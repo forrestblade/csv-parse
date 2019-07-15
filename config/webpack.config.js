@@ -69,7 +69,7 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       template: './public/index.html',
-      title: 'React Seed',
+      title: 'CSV Parse',
       favicon: './public/favicon.png'
     })
   ],

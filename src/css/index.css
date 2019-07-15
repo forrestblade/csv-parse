@@ -26,3 +26,21 @@ textarea {
 hr {
     margin-top: 1rem;
 }
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 812px) {
+    /* Styles */
+        textarea {
+            width: 600px;
+        }
+
+    }
+    
+    /* Smartphones (portrait) ----------- */
+    @media only screen and (max-width : 375px) {
+    /* Styles */
+        textarea {
+            width: 275px;
+        }
+
+    }

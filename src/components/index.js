@@ -38,7 +38,7 @@ export class App extends Component {
           />
           <button className='import' onClick={this.handleImportOffer}>Import</button>
           <br />
-          <textarea value={this.state.data} rows='20' cols='90' readOnly />
+          <textarea value={this.state.data} rows='20' readOnly />
         </div>
         <hr />
         <div>

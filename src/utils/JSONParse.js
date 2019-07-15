@@ -26,11 +26,11 @@ export default class JSONParse extends Component {
     } = this.props
 
     return (
-      <div className='export'>
-        <textarea value={data} rows='20' cols='90' />
+      <div>
+        <textarea rows='20' cols='90' />
         <br />
-        <button onClick={() => this.parseJSON(data, configOptions)} >
-          Create CSV
+        <button className='export' onClick={() => this.parseJSON(data, configOptions)} >
+          Export
         </button>
       </div>
     )

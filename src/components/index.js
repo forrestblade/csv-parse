@@ -28,6 +28,7 @@ export class App extends Component {
     return (
       <React.Fragment>
       <div>
+        <h2>CSV to JSON</h2>
         <CSVReader
           onFileLoaded={this.handleReadCSV}
           inputRef={this.fileInput}
@@ -35,11 +36,14 @@ export class App extends Component {
           onError={this.handleOnError}
           configOptions={{header: true}}
         />
-        <button onClick={this.handleImportOffer}>Import</button>
+        <button className='import' onClick={this.handleImportOffer}>Import</button>
+        <br />
+        <textarea value={this.state.data} rows='20' cols='90' readOnly />
       </div>
       <hr />
       <div>
-        <JSONParse data={this.state.data} />
+        <h2>JSON to CSV</h2>
+        <JSONParse />
       </div>
       </React.Fragment>
     );

@@ -3,25 +3,26 @@ body {
     justify-content: center;
 }
 
-.App {
-    text-align: center;
-    font-size: 24px;
-}
-
-.App .counter {
+textarea {
     display: flex;
     align-items: center;
     justify-content: space-around;
     border: 1px solid black;
-    width: 250px;
     height: 175px;
     box-shadow: 3px 3px gray
 }
 
-.App button {
-    height: 48px;
-    width: 48px;
+.import, .export{
+    height: 32px;
     background-color: white;
     border:1px solid black;
     box-shadow: 3px 3px gray
+}
+
+.import {
+    margin-bottom: 1rem;
+}
+
+hr {
+    margin-top: 1rem;
 }

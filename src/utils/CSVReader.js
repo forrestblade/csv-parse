@@ -27,7 +27,7 @@ export default class CSVReader extends Component {
         event.target.result,
         Object.assign(configOptions, {
           error: onError,
-          complete: function(results) {
+          complete: function (results) {
             onFileLoaded(results, filename)
           }
         })
@@ -37,7 +37,7 @@ export default class CSVReader extends Component {
     reader.readAsText(e.target.files[0])
   }
 
-  render() {
+  render () {
     const {
       inputRef,
       style

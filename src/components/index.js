@@ -1,30 +1,29 @@
 import React, { Component } from 'react'
-import { CSVReader, JSONParse } from '../utils';
+import { CSVReader, JSONParse } from '../utils'
 
 export class App extends Component {
-
-  constructor(props){
+  constructor (props) {
     super(props)
-    this.fileInput = React.createRef();
+    this.fileInput = React.createRef()
     this.state = {
       data: ''
     }
   }
-  
+
   handleReadCSV = (data, fileName) => {
     data = JSON.stringify(data)
-    this.setState({data})
+    this.setState({ data })
   }
 
   handleOnError = (err, file, inputElem, reason) => {
-    console.log(err);
+    console.log(err)
   }
 
   handleImportOffer = () => {
-    this.fileInput.current.click();
+    this.fileInput.current.click()
   }
 
-  render() {
+  render () {
     return (
       <main>
         <div>
@@ -32,9 +31,9 @@ export class App extends Component {
           <CSVReader
             onFileLoaded={this.handleReadCSV}
             inputRef={this.fileInput}
-            style={{display: 'none'}}
+            style={{ display: 'none' }}
             onError={this.handleOnError}
-            configOptions={{header: true}}
+            configOptions={{ header: true, skipEmptyLines: true }}
           />
           <button className='import' onClick={this.handleImportOffer}>Import</button>
           <br />
@@ -46,7 +45,6 @@ export class App extends Component {
           <JSONParse />
         </div>
       </main>
-    );
+    )
   }
 }
-

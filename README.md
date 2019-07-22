@@ -1,4 +1,5 @@
-# CSV-parse [![Netlify Status](https://api.netlify.com/api/v1/badges/5ce52414-105b-49af-b930-fc17f63331dd/deploy-status)](https://app.netlify.com/sites/csv-json-parse/deploys)
+# CSV-parse [![Netlify Status](https://api.netlify.com/api/v1/badges/5ce52414-105b-49af-b930-fc17f63331dd/deploy-status)](https://app.netlify.com/sites/csv-json-parse/deploys) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
 
 CSV-parse is a tool to help people parse CSV files into JSON objects and vice versa.  Use of the papaparse library is made, so features like auto-delimiter detection and many more cool things can be easily configured.  This is a work in progress so please create new issues as you may see them arise.
 

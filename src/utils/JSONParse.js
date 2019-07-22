@@ -23,7 +23,7 @@ export default class JSONParse extends Component {
     link.click()
   }
 
-  render() {
+  render () {
     const {
       data,
       configOptions = {}
